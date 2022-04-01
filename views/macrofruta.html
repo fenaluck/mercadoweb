@@ -1,0 +1,23 @@
+{% macro macro_fruta(fruta)%}
+<div 
+    class="col-4 justify-content-center d-flex"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+>
+    <div 
+        class="card my-5 p-4 " 
+        style="width: 18rem; cursor: pointer"
+        onclick= "comprar('{{fruta.url}}')"
+    >
+        <img 
+            src= "{{fruta.url}}" 
+            class = "card-img-top" 
+            alt = "{{fruta.nombre}}" 
+        >
+        <div class ="card_body"> 
+            <h5 class="card-title">{{fruta.nombre}}</h5>
+            <h5 class="card-subtitle mb-2 text-muted" > ${{fruta.precio}}</h5>
+        </div>
+</div>
+
+{% endmacro %}
